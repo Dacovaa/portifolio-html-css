@@ -63,8 +63,11 @@ body{
     color: var(--cor-secundaria);
 }
 .apresentacao__conteudo__paragrafo{
+    display: flex;
+    flex-direction: column;
     font-size: var(--tamanho-font-secundaria);
     font-family: var(--font-secundaria);
+    gap: 15px;
 }
 .apresentacao__imagem{
     width: 50%;
