@@ -26,10 +26,12 @@ body{
 .cabecalho{
     padding: 3% 8%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: center;
 }
 .cabecalho__menu{
     display: flex;
+    justify-content: center;
     gap: 16px;
 }
 .cabecalho__links{
@@ -50,9 +52,10 @@ body{
     gap: 24px;
     justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 .apresentacao__conteudo{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -60,9 +63,11 @@ body{
 .apresentacao__conteudo__titulo{
     font-family: var(--font-primaria);
     font-size: var(--tamanho-font-primaria);
+    width: 100%;
 }
 .destaca{
     color: var(--cor-secundaria);
+    width: 70%;
 }
 .apresentacao__conteudo__paragrafo{
     display: flex;
@@ -70,6 +75,7 @@ body{
     font-size: var(--tamanho-font-secundaria);
     font-family: var(--font-secundaria);
     gap: 15px;
+    width: 100%;
 }
 .apresentacao__imagem{
     width: 50%;
@@ -78,20 +84,23 @@ body{
 .apresentacao__links{
     display: flex;
     flex-direction: column;
+    width: 100%;
     align-items: center;
     gap: 32px;
+    padding: 0 0 2rem 0;
 }
 .apresentacao__links__subtitulo{
     font-size: var(--tamanho-font-secundaria);
     font-family: var(--font-primaria);
     font-weight: 100;
+    text-align: center;
 }
 .apresentacao__links__navegacao{
     display: flex;
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-secundaria);
-    width: 50%;
+    width: 60%;
     padding: 22px 0px;
     text-align: center;
     border-radius: 8px;
@@ -140,8 +149,12 @@ body{
     color: var(--cor-secundaria);
 }
 .container__conteudo{
-    padding: 3% 8%;
     gap: 2rem ;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .container__projeto{
     text-align: center;
@@ -152,7 +165,7 @@ body{
     flex-direction: column;
 }
 .container__imagem{
-    width: 100%;
+    width: 70%;
     border-radius: 0 ;
 }
 .botao__meio{
@@ -161,6 +174,13 @@ body{
 }
 .container__botao:hover{
     background-color: var(--cor-secundaria);
+}
+.container__botao{
+    width: 100%;
+}
+.container__paragrafo{
+    text-align: center;
+    width: 80%;
 }
 .espacamento{
     display: flex;
@@ -185,6 +205,10 @@ body{
     }
     .apresentacao__conteudo{
         width: auto;
+    }
+    .apresentacao__conteudo__titulo{
+        font-family: var(--font-primaria);
+        font-size: var(--tamanho-font-primaria);
     }
     .espacamento{
         display: flex;
