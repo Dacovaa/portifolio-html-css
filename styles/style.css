@@ -34,6 +34,16 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: var(--cor-fundo);
+}
+.sticky {
+    display: flex;
+    padding: 3% 5%;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    background-color: var(--cor-hover);
+    box-shadow: 0 0 10px 0 var(--cor-primaria);
 }
 .cabecalho__menu{
     display: flex;
@@ -123,6 +133,7 @@ body{
     color: var(--cor-terciaria);
     font-family: var(--font-secundaria);
     font-weight: 600;
+    box-shadow: 0 6px 6px 0 var(--cor-primaria);
 }
 .apresentacao__links__navegacao:hover{
     background-color: var(--cor-secundaria);
@@ -255,6 +266,11 @@ body{
     .cabecalho {
         padding: 5%;
         justify-content:center;
+        width: 90%;
+    }
+    .sticky{
+        padding: 2% 0;
+        width: 100%;
     }
     .apresentacao{
         padding: 3% 8%;
