@@ -137,6 +137,7 @@ body{
 }
 .apresentacao__links__navegacao:hover{
     background-color: var(--cor-secundaria);
+    box-shadow: 0 10px 10px 0 var(--cor-primaria);
 }
 .apresentacao__links__link:hover{
     background-color: var(--cor-hover);
@@ -195,7 +196,7 @@ body{
 }
 .container__imagem{
     width: 60%;
-    border-radius: 0 ;
+    border-radius: 0;
 }
 .botao__meio{
     display: flex;
@@ -322,6 +323,12 @@ body{
     }
     .container__imagem__perfil{
         width: 40%;
+    }
+    .apresentacao__links__navegacao:hover{
+        transform: scale(1.05) translateZ(0);
+    }
+    .container__imagem:hover{
+        transform: scale(1.01) translateZ(0);
     }
 }
 @media (min-width: 1728px) {
