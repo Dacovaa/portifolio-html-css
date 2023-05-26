@@ -319,6 +319,10 @@ body{
     .cabecalho__menu{
         box-shadow: 0 0 0 0;
     }
+    .cabecalho__menu__item:active{
+        background-color: var(--cor-fundo);
+        color: var(--cor-secundaria);
+    }
     .sticky{
         padding: 2% 0;
         width: 100%;
