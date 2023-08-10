@@ -39,7 +39,7 @@ body{
     position:fixed;
 }
 .container__inicio{
-    position:unset;
+    position:relative;
 }
 .cabecalho__menu-hamburguer{
     background-repeat: no-repeat;
