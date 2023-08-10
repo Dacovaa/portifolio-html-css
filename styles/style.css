@@ -31,19 +31,23 @@ body{
 }
 .cabecalho{
     padding: 3% 5%;
-    width: auto;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     text-align: center;
     background-color: var(--cor-hover);
-    position: relative;
+    position:fixed;
+}
+.container__inicio{
+    position:unset;
 }
 .cabecalho__menu-hamburguer{
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 25px;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     background-image: url(../assets/icons8-menu.svg);
 }
 .container__botao:checked ~ .cabecalho__menu{
@@ -93,8 +97,11 @@ body{
     background-color: var(--cor-secundaria);
     color: var(--cor-terciaria);
 }
+main{
+    padding: 15% 0 0 0;
+}
 .apresentacao{
-    padding: 8% 8%;
+    padding: 10% 8%;
     display: flex;
     flex-direction: column-reverse;
     gap: 24px;
@@ -296,6 +303,9 @@ body{
     font-size: 14px;
 }
 @media (min-width: 1024px){
+    main{
+        padding: 8% 0 0 0;
+    }
     .cabecalho {
         padding: 5%;
         justify-content:center;
@@ -305,6 +315,12 @@ body{
         justify-content: center;
         text-align: center;
         background-color: var(--cor-fundo);
+    }
+    .container__inicio{
+        position:unset;
+    }
+    .container__apresentacao{
+        padding: 5% 8%;
     }
     .cabecalho__menu__item{
         padding: 0;
@@ -337,10 +353,14 @@ body{
         display: none;
     }
     .apresentacao{
-        padding: 3% 8%;
+        padding: 4% 8% 3% 8%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+    }
+    .apresentacao__cartoes .apresentacao__sobre{
+        padding: 5%;
         align-items: center;
     }
     .apresentacao__conteudo{
@@ -358,6 +378,7 @@ body{
         align-items: center;
         justify-content: center;
         text-align: center;
+        padding: 5% 8% 3%;
     }
     .container__imagem{
         width: 80%;
@@ -365,6 +386,7 @@ body{
     }
     .junta__tudo{
         display: flex;
+        height: auto;
         flex-direction: row;
         align-items: center;
         justify-content: center;
