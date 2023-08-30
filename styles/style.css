@@ -29,50 +29,34 @@ body{
     background-color: var(--cor-fundo);
     color: var(--cor-terciaria);
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #131313;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--cor-secundaria);
+    border-radius: 10px;
+}
 .cabecalho{
-    padding: 3% 5%;
+    padding: 6% 0;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    background-color: var(--cor-hover);
+    background-color: var(--cor-fundo);
     position:fixed;
+    box-shadow: 0 6px 10px 0 var(--cor-primaria);
 }
 .container__inicio{
     position:relative;
 }
-.cabecalho__menu-hamburguer{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25px;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-image: url(../assets/icons8-menu.svg);
-}
-.container__botao:checked ~ .cabecalho__menu{
-    display: block;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    top: 100%;
-    left: 0;
-    width: auto;
-    position: absolute;
-    background-color: var(--cor-hover);
-    font-size: var(--tamanho-font-secundaria);
-    font-family: var(--font-secundaria);
-    padding: 1rem 0;
-}
 .cabecalho__menu__item{
-    background-color: var(--cor-fundo-rodape);
-    gap: 16px;
     list-style: none;
-    background-color: var(--cor-hover);
-    width: 40vh;
+    width: auto;
     text-align: start;
-    padding: 0.5rem 0 0.5rem 1.5rem;
+    padding: 0;
     color: var(--cor-terciaria);
     font-family: var(--font-secundaria);
     text-decoration: none;
@@ -90,8 +74,14 @@ body{
     box-shadow: 0 0 10px 0 var(--cor-primaria);
 }
 .cabecalho__menu{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.cabecalho__redes{
     display: none;
-    box-shadow: 0 10px 10px 0 var(--cor-primaria);
 }
 .cabecalho__menu__item:active{
     background-color: var(--cor-secundaria);
@@ -104,10 +94,23 @@ main{
     padding: 10% 8%;
     display: flex;
     flex-direction: column-reverse;
-    gap: 24px;
-    justify-content: space-between;
-    align-items: center;
+    gap: 2.5rem;
     justify-content: center;
+    align-items: center;
+}
+summary{
+    font-size: var(--tamanho-font-secundaria);
+    padding: 1rem 0;
+}
+summary::marker{
+    color: var(--cor-secundaria);
+}
+.container__preenche{
+    padding: 3% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
 }
 .container__apresentacao{
     display: flex;
@@ -259,6 +262,7 @@ main{
 }
 .container__titulo{
     text-align: center;
+    align-items: center;
 }
 .container__espaco{
     padding: 0 0 1rem 0;
@@ -302,6 +306,11 @@ main{
 .apresentacao__lista{
     font-size: 14px;
 }
+@media (min-width: 600px){
+    .cabecalho{
+        padding: 4% 0;
+    }
+}
 @media (min-width: 1024px){
     main{
         padding: 8% 0 0 0;
@@ -332,8 +341,17 @@ main{
         font-weight: 700;
         color: var(--cor-secundaria);
     }
-    .cabecalho__menu{
-        box-shadow: 0 0 0 0;
+    .container__contato{
+        display: none;
+    }
+    .cabecalho__redes{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .cabecalho__redes__icon{
+        width: 24px; 
+        height: 24px;
     }
     .cabecalho__menu__item:active{
         background-color: var(--cor-fundo);
@@ -344,20 +362,23 @@ main{
         width: 100%;
     }
     .cabecalho__menu{
-        display: block;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         gap: 16px;
-    }
-    .cabecalho__menu-hamburguer{
-        display: none;
+        box-shadow: 0 0 0 0;
     }
     .apresentacao{
-        padding: 4% 8% 3% 8%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        padding: 4% 8% 3% 8%;
+    }
+    details{
+        display: flex;
+        justify-content: start;
+    }
+    summary{
+        padding: 3% 0;
+        font-size: var(--tamanho-font-secundaria-pc);
     }
     .apresentacao__cartoes .apresentacao__sobre{
         padding: 5%;
@@ -418,6 +439,13 @@ main{
 }
 @media (min-width: 1728px) {
 
+    .cabecalho__menu__item{
+        font-size: var(--tamanho-font-secundaria-pc);
+    }
+    .cabecalho__redes__icon{
+        width: 35px;
+        height: 35px;
+    }
     .apresentacao__conteudo__titulo{
         font-size: var(--tamanho-font-primaria-pc);
     }
